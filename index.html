@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sílex y agua</title>
+    <meta name="description" content="Sílex y agua">
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        main {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 20px 0;
+        }
+
+        p {
+            max-width: 50%;
+            text-align: justify;
+            margin: 20px auto;
+            position: absolute;
+            z-index: 1;
+            color: black;
+            font-size: 24px;
+        }
+
+        .grid-container {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .grid-item {
+            overflow: hidden;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        canvas,
+        img {
+            filter: grayscale(1);
+        }
+
+        .scene-container {
+            width: 100%;
+            height: 600px;
+            /* Ajusta la altura según sea necesario */
+            margin: 20px 0;
+        }
+
+        a-scene {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <p>Sílex y agua es una investigación documental y artística que plantea la reconexión emocional de la ciudad
+            de Madrid con su pasado a través de dos elementos clave para el funcionamiento de las redes de Internet
+            hoy: el agua y el silicio. Para ello, se configura un ensayo visual con piezas de la colección
+            digitalizada del Museo de San Isidro de Madrid, en la que se recoge la memoria arqueológica y mítica de
+            la ciudad. Este ensayo audiovisual se aloja y se difunde a través de un portal wi-fi que puede ser
+            instalado en cualquier punto de la ciudad.
+            Accede al código <a href="http://" target="_blank" rel="noopener noreferrer">aquí</a>.
+            Accede al archivo <a
+                href="http://https://docs.google.com/drawings/d/17NEY3IcbHZd_ZNwb5VLKivrNmsM7ngLwnKhXfTQmdL8/edit?usp=sharing"
+                target="_blank" rel="noopener noreferrer">aquí</a>.
+        </p>
+        <div class="grid-container">
+            <div class="grid-item"><img src="./images/video.gif" alt="Imagen 8"></div>
+            <div class="grid-item"><img src="./images/image.png" alt="Imagen"></div>
+            <div class="grid-item"><img src="./images/image1.png" alt="Imagen 1"></div>
+            <div class="grid-item"><img src="./images/image2.png" alt="Imagen 2"></div>
+            <div class="grid-item"><img src="./images/image3.png" alt="Imagen 3"></div>
+            <div class="grid-item"><img src="./images/image4.png" alt="Imagen 4"></div>
+            <div class="grid-item"><img src="./images/image5.png" alt="Imagen 5"></div>
+            <div class="grid-item"><img src="./images/image6.png" alt="Imagen 6"></div>
+            <div class="grid-item"><img src="./images/image7.png" alt="Imagen 7"></div>
+            <div class="grid-item"><img src="./images/image8.png" alt="Imagen 8"></div>
+            <div class="grid-item"><img src="./images/image9.png" alt="Imagen 8"></div>
+        </div>
+
+        <div class="scene-container">
+            <a-scene visible="true" loading-screen="dotsColor: black; backgroundColor: white; enabled: true"
+                inspector="" keyboard-shortcuts="enterVR: false; exitVR: false" screenshot=""
+                vr-mode-ui="enabled: false" device-orientation-permission-ui="">
+                <a-entity obj-model="obj: #tree-obj" position="0 0.4 1.5" scale="0.5 0.5 0.5"></a-entity>
+                <a-entity gltf-model="url(./model.glb)" position="0 1 0" rotation="0 180 0" scale="2 2 2"></a-entity>
+                <a-entity id="camera" camera="" position="1 1 4" wasd-controls="enabled: true" rotation="-2 0 0"
+                    aframe-injected="" data-aframe-inspector-original-camera=""
+                    look-controls="enabled: true"></a-entity>
+                <a-entity light="intensity: 2; type: ambient; shadowCameraBottom: 0"></a-entity>
+                <a-assets>
+                    <a-asset-item id="tree-obj" src="./model1.obj"></a-asset-item>
+                </a-assets>
+            </a-scene>
+        </div>
+    </main>
+</body>
+
+</html>
